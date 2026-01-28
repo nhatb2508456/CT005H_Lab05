@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 - Nguyễn Thế Nhật (B2508456)</title>
+    <style>
+        :root {
+            --bg: #0b1220;
+            --card: #0f1724;
+            --muted: #9aa6ba;
+            --accent: #6dd3b6;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.05);
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #071025 0%, #0b1220 100%);
+            color: #e6eef6;
+            line-height: 1.6;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 28px; }
+        
+        /* Header Styling */
+        header.site-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .brand h1 { margin: 0; font-size: 1.5rem; color: #fff; }
+        .brand .subtitle { color: var(--accent); margin-top: 6px; font-size: 0.95rem; font-weight: 500; }
+        
+        nav.top-nav a { color: var(--muted); margin-left: 20px; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+        nav.top-nav a:hover { color: var(--accent); }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .hero h2 { margin: 0 0 15px; font-size: 2rem; }
+        .hero p { color: var(--muted); margin: 0; font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+
+        /* Grid Layout */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+        
+        /* Card Styling */
+        .card {
+            background: var(--card);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.4); border-color: var(--accent); }
+        .card h3 { margin: 0 0 12px; color: var(--accent); font-size: 1.2rem; }
+        .card p.desc { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; }
+
+        /* Media Containers */
+        .embed-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            border-radius: 8px;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .embed-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        
+        figure { margin: 0; }
+        figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            border: 1px solid var(--border);
+        }
+        figcaption { margin-top: 10px; color: var(--muted); font-size: 0.85rem; text-align: center; font-style: italic; }
+
+        /* Footer */
+        footer.site-footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); text-align: center; font-size: 0.9rem; }
+        
+        /* Responsive */
+        @media (max-width: 720px) {
+            header.site-header { flex-direction: column; align-items: flex-start; }
+            nav.top-nav { margin-top: 15px; margin-left: -20px; }
+            .hero { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="site-header">
+            <div class="brand">
+                <h1>Nguyễn Thế Nhật</h1>
+                <div class="subtitle">MSSV: B2508456 • Lớp CT005H</div>
+            </div>
+            <nav class="top-nav" aria-label="Main navigation">
+                <a href="#about">Giới thiệu</a>
+                <a href="#works">Bài tập Lab 5</a>
+                <a href="#contact">Liên hệ</a>
+            </nav>
+        </header>
+
+        <section id="about" class="hero">
+            <h2>Lợi ích của Công nghệ số trong Học tập</h2>
+            <p>"Công nghệ không chỉ là công cụ; đó là con đường dẫn đến việc học tập sâu sắc và thấu hiểu hơn."</p>
+        </section>
+
+        <section id="works">
+            <div class="grid">
+                
+                <article class="card">
+                    <h3>1. Báo cáo (PDF)</h3>
+                    <p class="desc">Văn bản báo cáo về ứng dụng công nghệ số và E-learning [Lab05_Ex1.1].</p>
+                    <div class="embed-container" style="background: white;">
+                        <iframe src="Lab05_Ex1.1.pdf#toolbar=0" title="Báo cáo công nghệ số"></iframe>
+                    </div>
+                    <div style="text-align: center; margin-top: 12px;">
+                        <a href="Lab05_Ex1.1.pdf" target="_blank" style="color: var(--accent); text-decoration: none; font-size: 0.9rem;">
+                            ⬇ Tải xuống PDF nếu không xem được
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>2. Infographic Minh họa</h3>
+                    <p class="desc">Hình ảnh thống kê về lợi ích và mức độ tương tác của sinh viên.</p>
+                    <figure>
+                        <img src="Lab05_Ex2.1.png" alt="Infographic lợi ích công nghệ số (85% sinh viên hứng thú hơn)">
+                        <figcaption>Nguồn: Canva AI / Unsplash (CC0)</figcaption>
+                    </figure>
+                </article>
+
+                <article class="card">
+                    <h3>3. Video Giới thiệu</h3>
+                    <p class="desc">Video minh họa thực tế về tác động của công nghệ trong lớp học.</p>
+                    <div class="embed-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/WiU5MQLM5EE" 
+                            title="Lợi ích công nghệ số" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="contact" style="margin-top: 50px; text-align: center;">
+            <h3 style="color: var(--accent)">Thông tin liên hệ</h3>
+            <p style="color: var(--muted)">
+                Email: <a href="mailto:nhatb2508456@student.ctu.edu.vn" style="color: #e6eef6;">nhatb2508456@student.ctu.edu.vn</a><br>
+                GitHub: <a href="#" style="color: #e6eef6;">github.com/nhatb2508456</a>
+            </p>
+        </section>
+
+        <footer class="site-footer">
+            <p>&copy; <span id="year"></span> Nguyễn Thế Nhật. All rights reserved.</p>
+            <p style="font-size: 0.8em; opacity: 0.6;">Lab 05 - Web Design Practicum</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
